@@ -1,0 +1,35 @@
+{
+  "name": "simplest-angular-redux-example",
+  "version": "0.0.1",
+  "description": "simplest redux + angular 1 example",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard",
+    "start": "watchify --extension=js -o bundle.js index.js & python -m SimpleHTTPServer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webmatze/simplest-angular-redux-example.git"
+  },
+  "keywords": [
+    "redux",
+    "angular"
+  ],
+  "author": "Mathias Karstädt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webmatze/simplest-angular-redux-example/issues"
+  },
+  "homepage": "https://github.com/webmatze/simplest-angular-redux-example#readme",
+  "devDependencies": {
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "standard": "^5.3.1",
+    "watchify": "^3.6.0"
+  },
+  "dependencies": {
+    "angular": "^1.4.7",
+    "ng-redux": "^3.1.0",
+    "redux": "^3.0.4"
+  }
+}
