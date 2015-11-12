@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "standard",
-    "start": "watchify index.js --debug --extension=js -v -o '| exorcist bundle.js.map > bundle.js' & python -m SimpleHTTPServer"
+    "start": "watchify index.js -g uglifyify --debug --extension=js -v -o 'exorcist bundle.js.map > bundle.js' & python -m SimpleHTTPServer"
   },
   "browserify": {
     "transform": [
@@ -39,6 +39,7 @@
     "browserify": "^12.0.1",
     "exorcist": "^0.4.0",
     "standard": "^5.3.1",
+    "uglifyify": "^3.0.1",
     "watchify": "^3.6.0"
   },
   "dependencies": {

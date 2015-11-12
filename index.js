@@ -1,6 +1,7 @@
 import angular from 'angular'
 import ngRedux from 'ng-redux'
 
+CounterController.$inject = ['$scope', '$ngRedux']
 function CounterController ($scope, $ngRedux) {
   // Map Redux state to component scope
   function mapStateToThis (state) {
@@ -46,8 +47,8 @@ function counterReducer (state = {count: 0}, action) {
 }
 
 angular.module('counter', [ngRedux])
-  .config(($ngReduxProvider) => {
-    // Store
+  .config(['$ngReduxProvider', ($ngReduxProvider) => {
+    // create Redux Store
     $ngReduxProvider.createStoreWith(counterReducer)
-  })
+  }])
   .directive('counterComponent', counterComponent)
